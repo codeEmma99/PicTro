@@ -1,0 +1,9 @@
+{
+  "name": "PicTro — Ghana transport",
+  "short_name": "PicTro",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f8f6",
+  "theme_color": "#0b7a61",
+  "description": "Find, track, and pay for buses across Ghana with PicTro."
+}

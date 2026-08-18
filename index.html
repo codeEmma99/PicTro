@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b7a61" />
+    <meta
+      name="description"
+      content="PicTro connects passengers, drivers, mates, and management in one modern transport system."
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="styles.css?v=4" />
+    <title>PicTro — move with confidence</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="PicTro home">
+          <span class="brand-mark">P</span>
+          <span>PicTro</span>
+        </a>
+
+        <nav class="side-nav">
+          <button class="nav-item is-active" data-view="home"><span>⌂</span> Home</button>
+          <button class="nav-item" data-view="track"><span>⌖</span> Track a bus</button>
+          <button class="nav-item" data-view="pass"><span>✦</span> PicTro Pass</button>
+          <button class="nav-item" data-view="wallet"><span>▣</span> Wallet</button>
+          <button class="nav-item" data-view="activity"><span>◷</span> Activity</button>
+        </nav>
+
+        <div class="sidebar-section">
+          <p class="eyebrow">For your team</p>
+          <button class="nav-item" data-view="staff"><span>◉</span> Staff hub</button>
+          <button class="nav-item" data-view="manage"><span>▤</span> Management</button>
+        </div>
+
+        <button class="profile-card account-menu-button" type="button" data-account-menu="true" aria-label="Open PicTro account menu">
+          <div class="avatar">AK</div>
+          <div>
+            <strong>Akosua K.</strong>
+            <span>Passenger account</span>
+          </div>
+          <span class="more" aria-hidden="true">•••</span>
+        </button>
+      </aside>
+
+      <main id="app-main" data-active-view="home" tabindex="-1"></main>
+    </div>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <button class="mobile-nav-item is-active" data-view="home"><span>⌂</span><small>Home</small></button>
+      <button class="mobile-nav-item" data-view="track"><span>⌖</span><small>Track</small></button>
+      <button class="mobile-nav-item" data-view="pass"><span>✦</span><small>Pass</small></button>
+      <button class="mobile-nav-item" data-view="wallet"><span>▣</span><small>Wallet</small></button>
+      <button class="mobile-nav-item" data-view="manage"><span>▤</span><small>Manage</small></button>
+    </nav>
+
+    <div class="modal-backdrop" id="modal-backdrop" hidden>
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" data-close-modal aria-label="Close">×</button>
+        <div id="modal-content"></div>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="backend.js"></script>
+    <script src="buttons.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="app.js?v=6"></script>
+  </body>
+</html>
